@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <title>完全に理解したCSS</title>
     <style>
-      .content {
-        position: relative;
+
+      /*外側の枠線のスタイル*/
+      .box {
+        position: relative;  /*複数の要素を重ねるためにpositionを使う。ここはrelativeにする*/
 
         width: 370px;
         height: 200px;
@@ -14,10 +16,12 @@
         border: 2px solid black;
         border-radius: 15px;
       }
+
+      /*文章のスタイル*/
       .para {
-        position: absolute; 
-        top: 10px;
-        left: 100px;
+        position: absolute; /*これでこの要素はrelativeに設定した「box」の手前に表示される*/
+        top: 10px;          /*画面上部から10pxの位置に配置*/
+        left: 100px;        /*画面左端から100pxの位置に配置*/
 
         font-size: 50px;
       }
@@ -25,7 +29,7 @@
   </head>
   <body>
 
-    <div class="content"></div>
+    <div class="box"></div>
     <p class="para">CSS<br>完全に理解した</p>
     
   </body>
